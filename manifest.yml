@@ -5,4 +5,4 @@ applications:
   env:
     WELCOME_MESSAGE: Hello from the review environment
   routes:
-  - route: pal-tracker-daring-fox.cfapps.io
+  - route: pal-tracker-alexis-johnson.cfapps.io
