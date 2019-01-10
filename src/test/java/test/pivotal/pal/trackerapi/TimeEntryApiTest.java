@@ -36,7 +36,6 @@ public class TimeEntryApiTest {
 
 
         assertThat(createResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-
         DocumentContext createJson = parse(createResponse.getBody());
         assertThat(createJson.read("$.id", Long.class)).isGreaterThan(0);
         assertThat(createJson.read("$.projectId", Long.class)).isEqualTo(123L);
@@ -120,7 +119,6 @@ public class TimeEntryApiTest {
         ResponseEntity<TimeEntry> response = restTemplate.exchange("/time-entries", HttpMethod.POST, entity, TimeEntry.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-
         return response.getBody().getId();
     }
 }
